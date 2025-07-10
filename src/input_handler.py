@@ -1,7 +1,7 @@
 import os, sys
 import threading
 import msvcrt
-import random
+import secrets
 from src.rules import RULES
 from src.patterns import set_pattern
 
@@ -23,6 +23,6 @@ def handle_key(self, key):
     if key == ' ': self.running = not self.running or threading.Thread(target=self.simulate, daemon=True).start()
     elif key == 'r': set_pattern(self, 'single')
     elif key == 'n': self.rule_num = list(RULES.keys())[(list(RULES.keys()).index(self.rule_num)+1) % len(RULES)]
-    elif key == 'p': set_pattern(self, random.choice(['single', 'double', 'triple', 'random', 'edges', 'symmetric']))
+    elif key == 'p': set_pattern(self, secrets.choice(['single', 'double', 'triple', 'random', 'edges', 'symmetric']))
     elif key == 'q': return False
     return True
