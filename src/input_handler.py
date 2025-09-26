@@ -17,7 +17,10 @@ def handle_input(self):
             while True:
                 if not handle_key(self, sys.stdin.read(1).lower()): break
             termios.tcsetattr(fd, termios.TCSADRAIN, old)
-    except: pass
+    except (OSError, termios.error) as e:
+        print(f"Error handling terminal input: {e}")
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old)
 
 def handle_key(self, key):
     if key == ' ': self.running = not self.running or threading.Thread(target=self.simulate, daemon=True).start()

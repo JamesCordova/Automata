@@ -2,5 +2,5 @@ projectKey=Cellular-Automaton
 serverUrl=http://localhost:9000
 serverVersion=10.6.0.92116
 dashboardUrl=http://localhost:9000/dashboard?id=Cellular-Automaton
-ceTaskId=64f8bc4d-84b6-465a-bcbe-098d93170ebe
-ceTaskUrl=http://localhost:9000/api/ce/task?id=64f8bc4d-84b6-465a-bcbe-098d93170ebe
+ceTaskId=ea113306-c915-4e1e-a33f-5f16aae415a0
+ceTaskUrl=http://localhost:9000/api/ce/task?id=ea113306-c915-4e1e-a33f-5f16aae415a0
